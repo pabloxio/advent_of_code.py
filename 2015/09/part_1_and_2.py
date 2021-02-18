@@ -1,5 +1,5 @@
 #  Usage: From root folder
-#  $ python 2015/09/part_1.py 2015/09/input
+#  $ python 2015/09/part_1_and_2.py 2015/09/input
 
 import sys
 import re
@@ -52,8 +52,9 @@ if __name__ == "__main__":
             else:
                 distances[start][end] = int(distance)
 
-    print(
-        min(
-            [route_cost(list(route), distances) for route in list(permutations(cities))]
-        )
-    )
+    route_costs = [
+        route_cost(list(route), distances) for route in list(permutations(cities))
+    ]
+
+    print(f"day_1: {min(route_costs)}")
+    print(f"day_2: {max(route_costs)}")
