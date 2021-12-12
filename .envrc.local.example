@@ -1,0 +1,8 @@
+# vim: filetype=bash
+
+export YEAR=2021
+export DAY=01
+export CONTEXT=${YEAR}/${DAY}
+export PART=${CONTEXT}/part_1.py
+# export INPUT=${CONTEXT}/input_test
+export INPUT=${CONTEXT}/input
